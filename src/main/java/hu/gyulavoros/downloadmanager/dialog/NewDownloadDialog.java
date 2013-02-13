@@ -49,12 +49,12 @@ public final class NewDownloadDialog extends SherlockDialogFragment {
                 intent.putExtra(DownloaderService.INTENT_URL, editDownloadUrl.getText().toString());
                 getActivity().startService(intent);
                 getDialog().dismiss();
+                DownloadManagerApplication.NEXT++;
             }
 
         });
 
         editDownloadUrl.setText(Constants.DOWNLOADS[DownloadManagerApplication.NEXT % 4]);
-        DownloadManagerApplication.NEXT++;
 
         return view;
     }
