@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_main_connectivity"
+        style="@style/TextAppearance.Sherlock.Light.DialogWindowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/icon_connectivity"
+        android:paddingBottom="@dimen/padding_list"
+        android:paddingTop="@dimen/padding_list" />
+
+    <ListView
+        android:id="@+id/lv_main_downloads"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_main_connectivity" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application -->
+    <string name="app_name">DownloadManager</string>
+
+    <!-- Actionbar -->
+    <string name="menu_add">Add</string>
+
+    <!-- Main -->
+    <string name="main_connectivity_none">Connection lost</string>
+    <string name="main_connectivity_mobile">On mobile connection</string>
+    <string name="main_connectivity_wifi">On WiFi connection</string>
+
+    <!-- Dialog -->
+    <string name="dialog_add_title">Add new download</string>
+    <string name="dialog_add_hint">type URL to download</string>
+    <string name="dialog_options_title">Download options</string>
+    <string name="dialog_options_wifi_bandwidth">WiFi limit</string>
+    <string name="dialog_options_mobile_bandwidth">Mobile limit</string>
+
+    <!-- Button -->
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+
+    <!-- Notification -->
+    <string name="notification_title">Download completed</string>
+
+</resources>

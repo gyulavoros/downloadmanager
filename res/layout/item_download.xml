@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_list" >
+
+    <ImageView
+        android:id="@+id/iv_item_download_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/padding_list"
+        android:src="@drawable/icon_status" />
+
+    <TextView
+        android:id="@+id/tv_item_download_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_item_download_speed"
+        android:layout_toRightOf="@+id/iv_item_download_status"
+        android:paddingRight="@dimen/padding_list"
+        android:textColor="@color/black" />
+
+    <ProgressBar
+        android:id="@+id/pb_item_download_progress"
+        style="@style/Widget.Sherlock.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_item_download_name"
+        android:layout_below="@+id/tv_item_download_name" />
+
+    <TextView
+        android:id="@+id/tv_item_download_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tv_item_download_downloaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_item_download_name"
+        android:layout_below="@+id/pb_item_download_progress" />
+
+    <TextView
+        android:id="@+id/tv_item_download_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pb_item_download_progress" />
+
+</RelativeLayout>
