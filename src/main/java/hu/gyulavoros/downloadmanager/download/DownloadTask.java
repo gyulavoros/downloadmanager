@@ -118,6 +118,7 @@ public final class DownloadTask extends Observable implements Callable<Boolean>,
             inputStream = new BufferedInputStream(connection.getInputStream());
 
             final String fileURL = url.getFile();
+            System.out.println(new File(outputFolder, fileURL.substring(fileURL.lastIndexOf('/') + 1)).toString());
             randomAccessFile = new RandomAccessFile(new File(outputFolder, fileURL.substring(fileURL.lastIndexOf('/') + 1)), "rw");
             randomAccessFile.seek(downloadedBytes);
 

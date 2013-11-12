@@ -1,12 +1,5 @@
 package hu.gyulavoros.downloadmanager.adapter;
 
-import hu.gyulavoros.downloadmanager.DownloadManagerApplication;
-import hu.gyulavoros.downloadmanager.R;
-import hu.gyulavoros.downloadmanager.Utils;
-import hu.gyulavoros.downloadmanager.download.DownloadTask;
-
-import java.util.List;
-
 import android.content.res.Resources;
 import android.graphics.drawable.LevelListDrawable;
 import android.view.LayoutInflater;
@@ -16,6 +9,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import hu.gyulavoros.downloadmanager.DownloadManagerApplication;
+import hu.gyulavoros.downloadmanager.R;
+import hu.gyulavoros.downloadmanager.Utils;
+import hu.gyulavoros.downloadmanager.download.DownloadTask;
+
+import java.util.List;
 
 public final class DownloadersAdapter extends BaseAdapter {
 
@@ -84,6 +83,7 @@ public final class DownloadersAdapter extends BaseAdapter {
 
         setStatsVisibility(holder, View.VISIBLE);
         view.setBackgroundColor(resources.getColor(R.color.transparent));
+        holder.progress.setVisibility(View.GONE);
 
         final int state = task.getState();
         int level = 0;
@@ -95,6 +95,7 @@ public final class DownloadersAdapter extends BaseAdapter {
             case DownloadTask.STATE_CONNECTING:
                 level = 1;
                 setStatsVisibility(holder, View.INVISIBLE);
+                holder.progress.setVisibility(View.VISIBLE);
                 break;
             case DownloadTask.STATE_DOWNLOADING:
                 level = 2;

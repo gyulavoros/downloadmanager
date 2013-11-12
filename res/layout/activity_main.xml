@@ -5,7 +5,7 @@
 
     <TextView
         android:id="@+id/tv_main_connectivity"
-        style="@style/TextAppearance.Sherlock.Light.DialogWindowTitle"
+        style="@android:style/TextAppearance.DialogWindowTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

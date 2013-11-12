@@ -1,9 +1,5 @@
 package hu.gyulavoros.downloadmanager;
 
-import hu.gyulavoros.downloadmanager.broadcast.ConnectivityBroadcastReceiver;
-
-import java.util.concurrent.Executors;
-
 import android.app.Application;
 import android.content.Context;
 import android.content.IntentFilter;
@@ -11,11 +7,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Process;
-
 import com.google.common.eventbus.EventBus;
 import com.google.common.util.concurrent.ListeningScheduledExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import hu.gyulavoros.downloadmanager.broadcast.ConnectivityBroadcastReceiver;
+
+import java.util.concurrent.Executors;
 
 public final class DownloadManagerApplication extends Application {
 

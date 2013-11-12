@@ -1,5 +1,23 @@
 package hu.gyulavoros.downloadmanager.activity;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.graphics.drawable.LevelListDrawable;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.MenuItemCompat;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.google.common.eventbus.Subscribe;
 import hu.gyulavoros.downloadmanager.ApplicationEvent;
 import hu.gyulavoros.downloadmanager.Constants;
 import hu.gyulavoros.downloadmanager.DownloadManagerApplication;
@@ -14,26 +32,7 @@ import hu.gyulavoros.downloadmanager.service.DownloaderService.DownloadBinder;
 import java.util.Observable;
 import java.util.Observer;
 
-import android.content.ComponentName;
-import android.content.Intent;
-import android.content.ServiceConnection;
-import android.graphics.drawable.LevelListDrawable;
-import android.os.Bundle;
-import android.os.IBinder;
-import android.support.v4.app.DialogFragment;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.google.common.eventbus.Subscribe;
-
-public final class DownloadManagerActivity extends SherlockFragmentActivity implements Observer {
+public final class DownloadManagerActivity extends FragmentActivity implements Observer {
 
     private static final String LOG_TAG = DownloadManagerActivity.class.getName();
 
@@ -133,7 +132,8 @@ public final class DownloadManagerActivity extends SherlockFragmentActivity impl
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
         optionsMenu = menu;
-        menu.add(0, 0, 0, R.string.menu_add).setIcon(R.drawable.content_new).setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        final MenuItem menuItem = menu.add(0, 0, 0, R.string.menu_add).setIcon(R.drawable.content_new);
+        MenuItemCompat.setShowAsAction(menuItem, MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         return true;
     }
 

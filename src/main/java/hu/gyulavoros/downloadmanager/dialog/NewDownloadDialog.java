@@ -1,20 +1,19 @@
 package hu.gyulavoros.downloadmanager.dialog;
 
-import hu.gyulavoros.downloadmanager.Constants;
-import hu.gyulavoros.downloadmanager.DownloadManagerApplication;
-import hu.gyulavoros.downloadmanager.R;
-import hu.gyulavoros.downloadmanager.service.DownloaderService;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import hu.gyulavoros.downloadmanager.Constants;
+import hu.gyulavoros.downloadmanager.DownloadManagerApplication;
+import hu.gyulavoros.downloadmanager.R;
+import hu.gyulavoros.downloadmanager.service.DownloaderService;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
-
-public final class NewDownloadDialog extends SherlockDialogFragment {
+public final class NewDownloadDialog extends DialogFragment {
 
     protected EditText editDownloadUrl;
 

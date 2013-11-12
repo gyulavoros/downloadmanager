@@ -6,21 +6,18 @@
 
     <TextView
         android:id="@+id/tv_download_options_wifi_bandwidth"
-        style="@style/TextAppearance.Sherlock.Widget.ActionBar.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_options_wifi_bandwidth" />
 
     <Spinner
         android:id="@+id/s_download_options_wifi"
-        style="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_download_options_wifi_bandwidth" />
 
     <TextView
         android:id="@+id/tv_download_options_mobile_bandwidth"
-        style="@style/TextAppearance.Sherlock.Widget.ActionBar.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/s_download_options_wifi"
@@ -28,7 +25,6 @@
 
     <Spinner
         android:id="@+id/s_download_options_mobile"
-        style="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_download_options_mobile_bandwidth" />
